@@ -67,6 +67,10 @@ struct MD_para
                              ///< not. liuyu 2023-03-01
     bool dump_virial = true; ///< output lattice virial into the file MD_dump or
                              ///< not. liuyu 2023-03-01
+    
+    bool enable_plumed = false; ///< enable plumed or not
+    std::string plumed_input = "plumed.dat"; ///< plumed input file
+    std::string plumed_output = "plumed.log"; ///< plumed output file
 };
 
 #endif // MD_PARA_H

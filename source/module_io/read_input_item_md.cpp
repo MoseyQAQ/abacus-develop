@@ -402,5 +402,23 @@ void ReadInput::item_md()
         read_sync_bool(input.mdp.dump_virial);
         this->add_item(item);
     }
+    {
+        Input_Item item("enable_plumed");
+        item.annotation = "enable plumed or not";
+        read_sync_bool(input.mdp.enable_plumed);
+        this->add_item(item);
+    }
+    {
+        Input_Item item("plumed_input");
+        item.annotation = "plumed input file";
+        read_sync_string(input.mdp.plumed_input);
+        this->add_item(item);
+    }
+    {
+        Input_Item item("plumed_output");
+        item.annotation = "plumed output file";
+        read_sync_string(input.mdp.plumed_output);
+        this->add_item(item);
+    }
 }
 } // namespace ModuleIO

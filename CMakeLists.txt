@@ -597,6 +597,11 @@ endif()
 list(APPEND math_libs m)
 target_link_libraries(${ABACUS_BIN_NAME} ${math_libs})
 
+set(PLUMED_ROOT "/calc_cache/lidenan/develop/abacus-plumed/plumed")
+find_library(PLUMED_LIB NAMES plumed PATHS ${PLUMED_ROOT}/lib)
+include_directories(${PLUMED_ROOT}/include)
+target_link_libraries(${ABACUS_BIN_NAME}  ${PLUMED_LIB})
+
 if(DEFINED Libxc_DIR)
   set(ENABLE_LIBXC ON)
 endif()
