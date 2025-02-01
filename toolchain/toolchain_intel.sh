@@ -16,7 +16,7 @@
 ./install_abacus_toolchain.sh \
 --with-intel=system --math-mode=mkl \
 --with-gcc=no --with-intelmpi=system \
---with-cmake=install \
+--with-cmake=system \
 --with-scalapack=no \
 --with-libxc=install \
 --with-fftw=no \
